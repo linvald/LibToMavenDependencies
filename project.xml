@@ -1,0 +1,64 @@
+<project>
+    <pomVersion>3</pomVersion>
+    <name>lib2repo</name>
+    <groupId>lib2repo</groupId>
+    <artifactId>lib2repo</artifactId>
+    <currentVersion>1.0</currentVersion>
+    <organization/>
+    <inceptionYear>2004</inceptionYear>
+    <versions>
+        <version>
+            <id>1.0</id>
+            <name>1.0</name>
+            <tag>HEAD</tag>
+        </version>
+    </versions>
+    <branches/>
+    <mailingLists/>
+    <developers>
+        <developer>
+            <name>Jesper Linvald</name>
+            <id>linvald</id>
+            <email>Jesper@linvald.net</email>
+            <organization>Maersk data</organization>
+            <roles>
+                <role>Java Developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+            <groupId>velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.4</version>
+            <type>jar</type>
+            <properties/>
+        </dependency>
+    </dependencies>
+    <build>
+        <sourceDirectory>src/java</sourceDirectory>
+        <unitTestSourceDirectory>src/test</unitTestSourceDirectory>
+        <resources>
+            <resource>
+                <directory>${basedir}/templates</directory>
+                <targetPath>templates</targetPath>
+                <includes>
+                    <include>*.vm</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+    <reports>
+        <report>maven-jdepend-plugin</report>
+        <report>maven-checkstyle-plugin</report>
+        <report>maven-javadoc-plugin</report>
+        <report>maven-jxr-plugin</report>
+        <report>maven-junit-report-plugin</report>
+        <report>maven-tasklist-plugin</report>
+        <report>maven-pmd-plugin</report>
+        <report>maven-simian-plugin</report>
+        <report>maven-clover-plugin</report>
+    </reports>
+    <properties/>
+</project>

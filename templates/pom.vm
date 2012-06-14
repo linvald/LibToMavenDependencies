@@ -1,0 +1,27 @@
+<project>
+    <pomVersion>3</pomVersion>
+    <id/>
+    <name/>
+    <groupId/>
+    <currentVersion>1.0</currentVersion>
+    <inceptionYear>2004</inceptionYear>
+    <dependencies>
+	#foreach($dependency in ${dependencies})
+	#if($dependency.getGroupId()!= "?" && $dependency.isToBeCopied())
+<dependency>
+    	    		<groupId>$dependency.getGroupId()</groupId>
+        		<artifactId>$dependency.getArtifactName()</artifactId>
+        		<version>$dependency.getVersionId()</version>
+        		<type>jar</type>
+		</dependency>
+	#end	
+	#end
+    </dependencies>
+    <build>
+        <nagEmailAddress/>
+        <sourceDirectory>src/java</sourceDirectory>
+        <unitTestSourceDirectory>src/test</unitTestSourceDirectory>
+    </build>
+
+</project>
+      
